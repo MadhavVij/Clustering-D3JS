@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <title>Quiz 5</title>
+
+    </head>
+    <body>
+    <div class="container">
+    <div class="media-left">
+     <img src="{{ url_for('static', filename = 'image.jpg') }}" width="150px" height="150px" class="media-object
+     img-circle"></div>
+     <div class="media-body">
+         <h1><b><center>Madhav Vij: 1001440170</center></b></h1>
+     </div>
+    </div>
+
+
+    <div class="container" >
+        <div class="well">
+        <div class="form-group">
+            <div class="page-header">
+                <h2>Details:</h2>
+            </div>
+            <form action="process" method="post">
+                <label for="col1">Column 1: </label> <input class="form-control" type="text" name="col1"
+                                                               placeholder="Eg: B" /><br/>
+                <label for="col2">Column 2: </label>  <input class="form-control" type="text" name="col2"
+                                                                placeholder="Eg: C" /><br/>
+                <label for="number1">Number: </label> <input class="form-control" type="text" name="number1"
+                                                               placeholder="Eg: 4" /><br/>
+                <input class="btn btn-success btn-block btn-lg" type="submit" value="query">
+            </form>
+        </div>
+        </div>
+
+    </div>
+
+
+
+     <div class="container" >
+        <div class="well">
+        <div class="form-group">
+            <div class="page-header">
+                <h2>Details:</h2>
+            </div>
+            <form action="pie" method="post">
+                <label for="col1">Column 1: </label> <input class="form-control" type="text" name="col1"
+                                                               placeholder="Eg: B" /><br/>
+                <label for="col2">Column 2: </label>  <input class="form-control" type="text" name="col2"
+                                                                placeholder="Eg: C" /><br/>
+                <label for="number1">Number: </label> <input class="form-control" type="text" name="number1"
+                                                               placeholder="Eg: 4" /><br/>
+                <input class="btn btn-success btn-block btn-lg" type="submit" value="query">
+            </form>
+        </div>
+        </div>
+
+    </div>
+
+
+
+     <div class="container" >
+        <div class="well">
+        <div class="form-group">
+            <div class="page-header">
+                <h2>Details:</h2>
+            </div>
+            <form action="bar" method="post">
+                <label for="col1">Column 1: </label> <input class="form-control" type="text" name="col1"
+                                                               placeholder="Eg: B" /><br/>
+                <label for="col2">Column 2: </label>  <input class="form-control" type="text" name="col2"
+                                                                placeholder="Eg: C" /><br/>
+                <label for="number1">Number: </label> <input class="form-control" type="text" name="number1"
+                                                               placeholder="Eg: 4" /><br/>
+                <input class="btn btn-success btn-block btn-lg" type="submit" value="query">
+            </form>
+        </div>
+        </div>
+
+    </div>
+
+
+    </body>
+</html>

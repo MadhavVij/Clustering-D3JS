@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    </head>
+    <body>
+
+
+    {% if numb %}
+
+
+    <div class="container">
+        <div class="page-header"><center><h1>Cluster Info</h1></center><br/>
+        <center><h3>Start Time: {{ numb[-3] }}</h3></center>
+            <center><h3>End Time: {{ numb[-2] }}</h3></center>
+            <center><h1>Time Taken: {{ numb[-2] - numb[-3] }}</h1></center>
+
+        </div>
+<div class="well">
+    <h3>Centeroids:</h3>
+    {% for list in numb[-1] %}
+        {{ list }}<br/>
+ {% endfor %}
+<br/><br/>
+<h3>Cluster:</h3>
+        {% for list in numb[:-3] %}
+             {{ list }}<br/>
+        {% endfor %}</div>
+        </div>
+    {% endif %}
+
+
+
+
+    {% if number1 %}
+
+
+    <div class="container">
+        <div class="page-header"><center><h1>Cluster Info</h1></center><br/>
+        <center><h3>Start Time: {{ number1[-2] }}</h3></center>
+            <center><h3>End Time: {{ number1[-1] }}</h3></center>
+            <center><h1>Time Taken: {{ number1[-1] - number1[-2] }}</h1></center>
+
+        </div>
+<div class="well">
+    <h3>Centeroids:</h3>
+    {% for list in number1[-3] %}
+        {{ list }}<br/>
+ {% endfor %}
+<br/><br/>
+<h3>Names:</h3>
+        {% for list in number1[:-3] %}
+             {{ list }}<br/>
+        {% endfor %}</div>
+        </div>
+    {% endif %}
+
+
+    </body>
+</html>

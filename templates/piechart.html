@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<canvas id="pie-chart" width="800" height="450"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+
+<script>
+new Chart(document.getElementById("pie-chart"), {
+    type: 'pie',
+    data: {
+
+      datasets: [{
+        label: "House Data",
+        backgroundColor: ["#5458cd", "#a2897a","#86ba55","#e8c3b9","#c4413a"],
+        data: {{ numb}}
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'House Information'
+      }
+    }
+});
+
+
+</script>
+
+</html>
+<br/><br/>
+{% for x in numb %}
+        {{ x }}
+{% endfor %}
