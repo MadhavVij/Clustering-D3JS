@@ -42,7 +42,7 @@ def cluster(K=3):
     data = whiten(data)
 
     centroids, distortion = kmeans(data, K)
-    print("distortion = " + str(distortion))
+    print(f"distortion = {str(distortion)}")
 
 
     idx, _ = vq(data, centroids)
@@ -55,8 +55,8 @@ def cluster(K=3):
     for i in range(K):
         result_names = clust[idx == i, 0]
         print("=================================")
-        print("Cluster " + str(i + 1))
-        clus_name = "Cluster " + str(i + 1)
+        print(f"Cluster {str(i + 1)}")
+        clus_name = f"Cluster {str(i + 1)}"
         count = 0
         for name in result_names:
             print(name)
@@ -100,8 +100,8 @@ def dispCluster(K=6):
 
     idx, _ = vq(data, centroids)
 
-    print('clust = '+str(clust))
-    print('data = '+str(data))
+    print(f'clust = {str(clust)}')
+    print(f'data = {str(data)}')
 
     numb = []
 
@@ -157,18 +157,16 @@ def ClusterInfo():
 
         idx, _ = vq(data, centroids)
 
-        print('clust = '+str(clust))
-        print('data = '+str(data))
+        print(f'clust = {str(clust)}')
+        print(f'data = {str(data)}')
 
 
 
         for i in range(K):
             result_names = clust[idx == i, 0]
 
-            count = 0
             for name in result_names:
                 print(name)
-                count += 1
                 numb.append(name)
 
         numb = sorted(numb)
@@ -208,7 +206,7 @@ def clusterPie():
         data = whiten(data)
 
         centroids, distortion = kmeans(data, K)
-        print("distortion = " + str(distortion))
+        print(f"distortion = {str(distortion)}")
 
 
         idx, _ = vq(data, centroids)
@@ -221,8 +219,8 @@ def clusterPie():
         for i in range(K):
             result_names = clust[idx == i, 0]
             print("=================================")
-            print("Cluster " + str(i + 1))
-            clus_name = "Cluster " + str(i + 1)
+            print(f"Cluster {str(i + 1)}")
+            clus_name = f"Cluster {str(i + 1)}"
             count = 0
             for name in result_names:
                 print(name)
@@ -258,7 +256,7 @@ def clusterBar():
         data = whiten(data)
 
         centroids, distortion = kmeans(data, K)
-        print("distortion = " + str(distortion))
+        print(f"distortion = {str(distortion)}")
 
 
         idx, _ = vq(data, centroids)
@@ -271,8 +269,8 @@ def clusterBar():
         for i in range(K):
             result_names = clust[idx == i, 0]
             print("=================================")
-            print("Cluster " + str(i + 1))
-            clus_name = "Cluster " + str(i + 1)
+            print(f"Cluster {str(i + 1)}")
+            clus_name = f"Cluster {str(i + 1)}"
             count = 0
             for name in result_names:
                 print(name)
